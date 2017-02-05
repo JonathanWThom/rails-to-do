@@ -21,7 +21,6 @@ class TasksController < ApplicationController
   end
 
   def update
-    @list= List.find(params[:list_id])
     @task = Task.find(params[:id])
     if @task.update(task_params)
       redirect_to list_path(@task.list)
